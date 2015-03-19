@@ -3,6 +3,9 @@
 
 int main (int argc, char** argv)
 {
-  printf("Hello");
+  FILE *file;
+  char * inputBuffer;
+  scanf("%s", inputBuffer);
+  file = fopen(inputBuffer, "r");
   return 1;
 }
