@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "list.h"
 
 int main (int argc, char** argv)
 {
@@ -17,5 +18,10 @@ int main (int argc, char** argv)
       break;
     }
   }
+  fclose(file);
+  addNode(1);
+  addNode(3);
+  addNode(37);
+  prettyPrint();
   return 1;
 }
