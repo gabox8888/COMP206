@@ -18,10 +18,14 @@ int main (int argc, char** argv)
       break;
     }
   }
+  int numberBuffer = 0;
+  fscanf(file,"%d",&numberBuffer);
+  while (!feof(file))
+  {
+    addNode(numberBuffer);
+    fscanf(file,"%d",&numberBuffer);
+  } 
   fclose(file);
-  addNode(1);
-  addNode(3);
-  addNode(37);
   prettyPrint();
   return 1;
 }
