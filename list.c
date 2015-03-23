@@ -59,7 +59,9 @@ void prettyPrint()
 
   if (head->nextNode == NULL) 
   {
-    printf("List is empty!"); 
+    printf("List is empty!");
+    printf("\n");
+    exit (0); 
   }
   else 
   {

@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "list.h"
 
 int main (int argc, char** argv)
@@ -49,7 +48,7 @@ int main (int argc, char** argv)
     printf("\n");
     printf("Would you like to delete another number?"); // Prompt user if they want to make another pyramid
     scanf("%s",inputRepeat);
-    if((strcmp(inputRepeat,"Yes") == 0) || (strcmp(inputRepeat,"yes") == 0) || (strcmp(inputRepeat,"YES") == 0) || (strcmp(inputRepeat,"y") == 0) || (strcmp(inputRepeat,"Y") == 0))//If user inputs any combo of YES, yes, Y,y add one to the static while loop variable, this could be useful in case we want to print out tht number of times we looped
+    if((strcmp(inputRepeat,"yes") == 0) || (strcmp(inputRepeat,"YES") == 0) || (strcmp(inputRepeat,"y") == 0) || (strcmp(inputRepeat,"Y") == 0))//If user inputs any combo of YES, yes, Y,y add one to the static while loop variable, this could be useful in case we want to print out tht number of times we looped
     {
       loopRepeat++;
     }
