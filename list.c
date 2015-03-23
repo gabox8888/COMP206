@@ -16,6 +16,24 @@ void initHead()
   }
 }
 
+listNode* findNode(int queryValue)
+{
+  initHead();
+
+  listNode* ptrNode = head;
+
+  while (ptrNode->nextNode->value != queryValue)
+  {
+    ptrNode = ptrNode->nextNode;
+    if (ptrNode->nextNode == NULL)
+    {
+      ptrNode = NULL;
+      break;
+    }
+  }
+  return ptrNode;
+}
+
 void addNode(int value)
 {
   initHead();
@@ -52,4 +70,21 @@ void prettyPrint()
     printf( " %d ", ptrNode->value);
     ptrNode = ptrNode->nextNode;
   }
+}
+
+BOOLEAN deleteNode(int queryValue)
+{
+  BOOLEAN result = 1;
+  listNode* ptrNode = findNode(queryValue);  
+
+  if (ptrNode != NULL)
+  {
+    listNode* deleteNode = ptrNode->nextNode;
+    ptrNode->nextNode = deleteNode->nextNode;
+    deleteNode->nextNode = NULL;
+    free(deleteNode);
+  }
+  else result = 0;
+
+  return result;
 }

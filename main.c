@@ -27,5 +27,9 @@ int main (int argc, char** argv)
   } 
   fclose(file);
   prettyPrint();
+  printf("\n");
+  deleteNode(1);
+  printf("\n");
+  prettyPrint();
   return 1;
 }
