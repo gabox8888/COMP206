@@ -1,6 +1,8 @@
 #ifndef LIST_H_
 #define LIST_H_
 
+#include <stdlib.h>
+
 typedef int BOOLEAN;
 
 void addNODE(int value);//This will add another value to the linked list
